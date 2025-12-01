@@ -40,6 +40,13 @@ export const NAV_ITEMS: NavItem[] = [
   { label: 'Contact', path: '/contact' },
 ];
 
+export const FOOTER_NAV_ITEMS: NavItem[] = [
+  { label: 'About', path: '/about' },
+  { label: 'Services', path: '/services' },
+  { label: 'Resources', path: '/resources' },
+  { label: 'Contact', path: '/contact' },
+];
+
 export const SERVICES: Service[] = [
   {
     id: 'eidbi',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Sun } from 'lucide-react';
-import { SITE_CONFIG, NAV_ITEMS } from '../../constants';
+import { SITE_CONFIG, FOOTER_NAV_ITEMS } from '../../constants';
 
 const Footer: React.FC = () => {
   return (
@@ -12,46 +12,13 @@ const Footer: React.FC = () => {
           {/* Brand Column */}
           <div className="col-span-1 md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="bg-brand-100 p-1.5 rounded-full text-brand-600">
-                <Sun size={20} strokeWidth={2.5} />
-              </div>
-              <span className="font-display font-bold text-xl text-slate-800">
+              <span className="font-display font-bold text-2xl text-slate-800">
                 {SITE_CONFIG.name}
               </span>
             </div>
             <p className="text-slate-500 text-sm leading-relaxed mb-6">
               {SITE_CONFIG.tagline}
             </p>
-            <div className="flex space-x-4">
-              <a href={SITE_CONFIG.socials.facebook} className="text-slate-400 hover:text-brand-600 transition-colors">
-                <Facebook size={20} />
-              </a>
-              <a href={SITE_CONFIG.socials.instagram} className="text-slate-400 hover:text-brand-600 transition-colors">
-                <Instagram size={20} />
-              </a>
-              <a href={SITE_CONFIG.socials.linkedin} className="text-slate-400 hover:text-brand-600 transition-colors">
-                <Linkedin size={20} />
-              </a>
-            </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-display font-bold text-slate-800 mb-4">Explore</h3>
-            <ul className="space-y-3">
-              {NAV_ITEMS.map((item) => (
-                <li key={item.path}>
-                  <Link to={item.path} className="text-slate-500 hover:text-brand-600 text-sm transition-colors">
-                    {item.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Contact Info */}
-          <div>
-            <h3 className="font-display font-bold text-slate-800 mb-4">Contact Us</h3>
             <ul className="space-y-4">
               <li className="flex items-center gap-3 text-sm text-slate-500">
                 <Phone className="text-brand-500 shrink-0" size={18} />
@@ -65,6 +32,28 @@ const Footer: React.FC = () => {
                   {SITE_CONFIG.contact.email}
                 </a>
               </li>
+            </ul>
+            
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h3 className="font-display font-bold text-slate-800 mb-4">Explore</h3>
+            <ul className="space-y-3">
+              {FOOTER_NAV_ITEMS.map((item) => (
+                <li key={item.path}>
+                  <Link to={item.path} className="text-slate-500 hover:text-brand-600 text-sm transition-colors">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="font-display font-bold text-slate-800 mb-4">Contact Us</h3>
+            <ul className="space-y-4">
                <li className="flex items-start gap-3 text-sm text-slate-500 pt-2">
                 <MapPin className="text-brand-500 shrink-0" size={18} />
                 <div className="space-y-2">
@@ -94,9 +83,21 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-8 border-t border-slate-100 text-center">
+        {/* <div className="flex mx-auto justify-center space-x-4 my-6">
+              <a href={SITE_CONFIG.socials.facebook} className="text-slate-400 hover:text-brand-600 transition-colors">
+                <Facebook size={20} />
+              </a>
+              <a href={SITE_CONFIG.socials.instagram} className="text-slate-400 hover:text-brand-600 transition-colors">
+                <Instagram size={20} />
+              </a>
+              <a href={SITE_CONFIG.socials.linkedin} className="text-slate-400 hover:text-brand-600 transition-colors">
+                <Linkedin size={20} />
+              </a>
+            </div> */}
+
+        <div className="mt-12 pt-8 border-t border-slate-100 text-center">
           <p className="text-slate-400 text-sm">
-            &copy; {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.
+            &copy; {new Date().getFullYear()} <a href="/" className="text-brand-600 hover:text-brand-700 transition-colors">{SITE_CONFIG.name}</a>. All rights reserved. Powered by <a href="https://bsmg.co/" className="text-brand-600 hover:text-brand-700 transition-colors">BSMG Digital</a>.
           </p>
         </div>
       </div>
