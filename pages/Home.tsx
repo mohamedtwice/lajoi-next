@@ -26,7 +26,7 @@ const Home: React.FC = () => {
                 LaJoie Autism Center provides accessible, evidence-based EIDBI therapy. We bridge the gap between clinical excellence and community connection.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button href="/contact" size="lg">
+                <Button href="/book-consultation" size="lg">
                   Schedule Consultation
                 </Button>
                 <Button href="/services" variant="secondary" size="lg">
@@ -42,7 +42,7 @@ const Home: React.FC = () => {
             <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-brand-100/50 aspect-[4/3] transform rotate-2 hover:rotate-0 transition-transform duration-500 bg-brand-100">
                 <img 
-                  src="/hero-boy.jpeg" 
+                  src="https://images.unsplash.com/photo-1606092195730-5d7b9af1ef4d?auto=format&fit=crop&q=80&w=1200" 
                   alt="Young boy smiling at LaJoie Autism Center" 
                   className="w-full h-full object-cover"
                 />
@@ -102,8 +102,8 @@ const Home: React.FC = () => {
           <div className="lg:flex items-center gap-16">
             <div className="lg:w-1/2 mb-10 lg:mb-0">
                <div className="grid grid-cols-2 gap-4">
-                 <img src="/therapy-session.jpeg" alt="Therapist laughing with a child" className="rounded-2xl shadow-lg mt-8 object-cover h-64 w-full" />
-                 <img src="/lajoie-services.jpeg" alt="Child high-fiving therapist" className="rounded-2xl shadow-lg object-cover h-64 w-full" />
+                 <img src="https://images.unsplash.com/photo-1602978010620-1d8856641b6c?auto=format&fit=crop&q=80&w=800" alt="Therapist laughing with a child" className="rounded-2xl shadow-lg mt-8 object-cover h-64 w-full" />
+                 <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=800" alt="Child high-fiving therapist" className="rounded-2xl shadow-lg object-cover h-64 w-full" />
                </div>
             </div>
             <div className="lg:w-1/2">
@@ -164,7 +164,7 @@ const Home: React.FC = () => {
           <p className="text-brand-100 text-lg mb-8 max-w-2xl mx-auto">
             We accept Medical Assistance (Medicaid), TEFRA, and most private insurance plans.
           </p>
-          <Button href="/contact" variant="secondary" size="lg">
+          <Button href="/book-consultation" variant="secondary" size="lg">
             Contact Us Today
           </Button>
         </div>

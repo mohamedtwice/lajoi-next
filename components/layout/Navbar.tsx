@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
                 {item.label}
               </NavLink>
             ))}
-            <Button href="/contact" size="sm" variant="primary">
+            <Button href="/book-consultation" size="sm" variant="primary">
               Book Consultation
             </Button>
           </div>
@@ -77,7 +77,7 @@ const Navbar: React.FC = () => {
               </NavLink>
             ))}
             <div className="pt-4 px-4">
-              <Button href="/contact" className="w-full" onClick={() => setIsOpen(false)}>
+              <Button href="/book-consultation" className="w-full" onClick={() => setIsOpen(false)}>
                 Book Consultation
               </Button>
             </div>

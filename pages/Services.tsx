@@ -19,7 +19,7 @@ const Services: React.FC = () => {
         {/* Referral Note */}
         <div className="bg-blue-50 border border-blue-100 rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center justify-between">
            <img 
-             src="/clinical-consult.jpeg" 
+             src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&q=80&w=800" 
              alt="Doctor consulting with a child" 
              className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-md shrink-0 border-4 border-white"
            />
@@ -29,7 +29,7 @@ const Services: React.FC = () => {
                To access EIDBI services, a Comprehensive Multi-Disciplinary Evaluation (CMDE) is required. While we focus on treatment, we can refer you to trusted diagnostic partners like the Rosenberg Center.
              </p>
            </div>
-           <Button href="/contact" variant="outline" size="sm" className="shrink-0">
+           <Button href="/book-consultation" variant="outline" size="sm" className="shrink-0">
              Contact for Referral
            </Button>
         </div>
@@ -78,7 +78,7 @@ const Services: React.FC = () => {
         <div className="bg-brand-600 rounded-3xl p-12 text-center text-white mt-16">
           <h2 className="text-2xl font-bold mb-4">Not sure if you qualify?</h2>
           <p className="mb-8 text-brand-100">Our team can help verify your eligibility for Medical Assistance or private insurance coverage.</p>
-          <Button href="/contact" variant="secondary">Contact Us for Guidance</Button>
+          <Button href="/book-consultation" variant="secondary">Contact Us for Guidance</Button>
         </div>
       </div>
     </div>

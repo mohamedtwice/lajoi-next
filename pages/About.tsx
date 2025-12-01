@@ -18,7 +18,7 @@ const About: React.FC = () => {
           <div className="relative">
             <div className="absolute inset-0 bg-brand-200 rounded-3xl transform rotate-3 translate-x-2 translate-y-2"></div>
             <img 
-              src="/community-collage.jpeg" 
+              src="https://images.unsplash.com/photo-1545558014-a69f9c0bdc04?auto=format&fit=crop&q=80&w=800" 
               alt="Diverse group of smiling children" 
               className="relative rounded-3xl shadow-xl w-full z-10"
             />

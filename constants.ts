@@ -47,7 +47,7 @@ export const SERVICES: Service[] = [
     description: 'Early Intensive Developmental and Behavioral Intervention (EIDBI) is a Minnesota Health Care Program benefit for people under age 21.',
     icon: Heart,
     benefits: ['Medically necessary treatment', 'Covered by Medical Assistance', 'Culturally responsive'],
-    image: '/eidbi-services.jpeg'
+    image: 'https://images.unsplash.com/photo-1596464716127-f9a804e0693e?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'aba',
@@ -55,7 +55,7 @@ export const SERVICES: Service[] = [
     description: 'Individualized, evidence-based ABA therapy focused on skill acquisition, communication, and reducing challenging behaviors.',
     icon: Puzzle,
     benefits: ['1:1 Direct Intervention', 'Customized Learning Plans', 'Skill Building'],
-    image: '/success-high-five.jpeg'
+    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'social',
@@ -63,7 +63,7 @@ export const SERVICES: Service[] = [
     description: 'Facilitated groups for various ages (Pre-K through High School) to practice peer interaction in a safe environment.',
     icon: Users,
     benefits: ['Peer Interaction', 'Emotional Regulation', 'Turn-Taking'],
-    image: '/ther'
+    image: 'https://images.unsplash.com/photo-1503919545874-0763d9316531?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'observation',
@@ -71,7 +71,7 @@ export const SERVICES: Service[] = [
     description: 'Ongoing supervision by Qualified Supervising Professionals (QSP) to ensure treatment fidelity and progress.',
     icon: Brain,
     benefits: ['Clinical Oversight', 'Plan Adjustment', 'Quality Assurance'],
-    image: '/observation-direction.jpeg'
+    image: 'https://images.unsplash.com/photo-1632053001099-0e44299b6623?auto=format&fit=crop&q=80&w=800'
   },
   {
     id: 'family',
@@ -79,7 +79,7 @@ export const SERVICES: Service[] = [
     description: 'Empowering parents with strategies to support their child’s development at home and navigate the system.',
     icon: MessageCircle,
     benefits: ['Home Strategies', 'Advocacy Support', 'Family Harmony'],
-    image: '/family-collaboration.jpeg'
+    image: 'https://images.unsplash.com/photo-1543666277-c9de754d922a?auto=format&fit=crop&q=80&w=800'
   },
 ];
 

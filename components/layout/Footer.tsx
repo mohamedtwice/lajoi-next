@@ -37,7 +37,7 @@ const Footer: React.FC = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-display font-bold text-slate-800 mb-4">Explore</h3>
+            <h3 className="font-display font-bold text-slate-800 mb-4">Quick Links</h3>
             <ul className="space-y-3">
               {NAV_ITEMS.map((item) => (
                 <li key={item.path}>
