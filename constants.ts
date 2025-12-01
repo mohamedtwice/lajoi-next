@@ -5,6 +5,7 @@ import { ROUTES } from './config/routes';
 // Site Configuration
 export const SITE_CONFIG = {
   name: "LaJoie Autism Center",
+  shortname: "LaJoie",
   tagline: "Culturally competent, community-focused care for the Twin Cities.",
   contact: {
     phone: "(651) 555-0199",
@@ -33,11 +34,11 @@ export const SITE_CONFIG = {
 };
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Home', path: ROUTES.HOME },
-  { label: 'About', path: ROUTES.ABOUT },
+  // { label: 'Home', path: ROUTES.HOME },
   { label: 'Services', path: ROUTES.SERVICES },
-  { label: 'Team', path: ROUTES.TEAM },
   { label: 'Resources', path: ROUTES.RESOURCES },
+  { label: 'About', path: ROUTES.ABOUT },
+  // { label: 'Team', path: ROUTES.TEAM },
   { label: 'Contact', path: ROUTES.CONTACT },
 ];
 

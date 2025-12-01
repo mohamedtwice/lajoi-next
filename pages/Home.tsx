@@ -40,7 +40,7 @@ const Home: React.FC = () => {
               </div> */}
             </div>
             
-            <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
+            <div className="relative mx-auto w-full max-w-3xl lg:max-w-none">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-brand-100/50 aspect-[4/3] transform rotate-2 hover:rotate-0 transition-transform duration-500 bg-brand-100">
                 <img 
                   src="/hero-boy.jpeg" 

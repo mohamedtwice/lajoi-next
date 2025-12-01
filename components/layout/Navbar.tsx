@@ -20,18 +20,18 @@ const Navbar: React.FC = () => {
               <Sun size={28} strokeWidth={2.5} />
             </div>
             <span className="font-display font-bold text-2xl md:text-3xl text-slate-800 tracking-tight">
-              {SITE_CONFIG.name}
+              {SITE_CONFIG.shortname} <span className="md:hidden lg:inline-block">Autism Center</span>
             </span>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {NAV_ITEMS.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
                 className={({ isActive }) =>
-                  `text-sm font-medium transition-colors hover:text-brand-600 ${
+                  `text-lg font-black transition-colors hover:text-brand-600 ${
                     isActive ? 'text-brand-600 font-semibold' : 'text-slate-600'
                   }`
                 }
@@ -39,7 +39,7 @@ const Navbar: React.FC = () => {
                 {item.label}
               </NavLink>
             ))}
-            <Button href={ROUTES.BOOK_CONSULTATION} size="sm" variant="primary">
+            <Button href={ROUTES.BOOK_CONSULTATION} size="lg" variant="primary">
               Book Consultation
             </Button>
           </div>
