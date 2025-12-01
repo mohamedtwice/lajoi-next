@@ -144,25 +144,72 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const RESOURCES: Resource[] = [
-  {
-    id: 'r1',
-    title: "MN Help Me Connect",
-    description: "A navigator for connecting pregnant individuals and families with young children to local services.",
-    link: "https://helpmeconnect.web.health.state.mn.us/HelpMeConnect/",
-    category: "External",
-  },
+  // Diagnosis & Assessment (The "Front Door")
   {
     id: 'r2',
-    title: "Understanding EIDBI",
-    description: "Information about the Early Intensive Developmental and Behavioral Intervention benefit.",
-    link: "#",
-    category: "Guide",
+    title: "Ramsey County – Disability Services Intake",
+    description: "The first step to accessing county services and waivers. Call 651-266-3613 to request a MnCHOICES assessment for your child.",
+    link: "https://www.ramseycounty.us",
+    category: "Diagnosis & Assessment",
   },
   {
     id: 'r3',
-    title: "Autism Society of Minnesota",
-    description: "Resources, education, and advocacy for the Minnesota autism community.",
-    link: "https://ausm.org/",
-    category: "External",
+    title: "Hennepin County – Disability Services Intake",
+    description: "Residents of Hennepin County can request a MnCHOICES assessment by calling the Front Door intake line at 612-348-4111.",
+    link: "https://www.hennepin.us",
+    category: "Diagnosis & Assessment",
+  },
+  
+  // Cultural & Community Support
+  {
+    id: 'r4',
+    title: "Somali Parents Autism Network (SPAN)",
+    description: "Support, advocacy, and education specifically for Somali families navigating autism services in Minnesota.",
+    link: "https://somaliparentsautism.org",
+    category: "Cultural & Community Support",
+  },
+  {
+    id: 'r5',
+    title: "Multicultural Autism Action Network (MAAN)",
+    description: "A network dedicated to supporting multicultural families with resources, navigation, and community events.",
+    link: "https://maanmn.org",
+    category: "Cultural & Community Support",
+  },
+  {
+    id: 'r6',
+    title: "Hmong American Partnership (HAP)",
+    description: "Comprehensive social services and family support for the Hmong community, including healthcare navigation and transportation.",
+    link: "https://hmong.org",
+    category: "Cultural & Community Support",
+  },
+  {
+    id: 'r7',
+    title: "CLUES (Comunidades Latinas Unidas En Servicio)",
+    description: "Mental health, family support, and disability resources for Latino families, with services available in Spanish.",
+    link: "https://clues.org",
+    category: "Cultural & Community Support",
+  },
+  
+  // Logistics & Rights
+  {
+    id: 'r8',
+    title: "MN Medical Assistance Transportation",
+    description: "If you have Medical Assistance (MA), you may be eligible for free transportation to and from our center. Blue Plus (BlueRide): 651-662-8648 | HealthPartners (RideCare): 952-883-7400 | Straight MA (MNET): 651-645-9254",
+    link: "#transportation",
+    category: "Logistics & Rights",
+  },
+  {
+    id: 'r9',
+    title: "PACER Center",
+    description: "Champions for children with disabilities. Contact PACER for free help with Individualized Education Programs (IEPs) and school advocacy.",
+    link: "https://pacer.org",
+    category: "Logistics & Rights",
+  },
+  {
+    id: 'r10',
+    title: "MN Autism Resource Portal (Multi-Language)",
+    description: "The state's official guide to autism resources, including translated documents in Somali, Hmong, Spanish, and Karen.",
+    link: "https://mn.gov/autism/",
+    category: "Logistics & Rights",
   },
 ];

@@ -58,15 +58,15 @@ const BookConsultation: React.FC = () => {
   return (
     <div className="min-h-screen bg-warm-50 pb-20">
       {/* Header */}
-      <div className="bg-white border-b border-brand-100">
+      <div className="bg-brand-600 border-b border-brand-100">
         <div className="max-w-3xl mx-auto px-4 py-8">
-          <Link to={ROUTES.HOME} className="inline-flex items-center text-slate-500 hover:text-brand-600 mb-6 transition-colors font-medium text-sm">
+          <Link to={ROUTES.HOME} className="inline-flex items-center text-brand-100 hover:text-white mb-6 transition-colors font-medium text-sm">
             <ArrowLeft size={16} className="mr-1" /> Back to Home
           </Link>
-          <h1 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-2">
+          <h1 className="text-3xl md:text-4xl font-display font-bold text-white mb-2">
             Schedule Your Free Consultation
           </h1>
-          <p className="text-slate-600 text-lg">
+          <p className="text-brand-100 text-lg">
             Take the first step towards personalized support. No commitment required.
           </p>
         </div>

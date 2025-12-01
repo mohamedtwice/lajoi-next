@@ -34,5 +34,5 @@ export interface Resource {
   title: string;
   description: string;
   link: string;
-  category: 'Article' | 'Guide' | 'External';
+  category: 'Diagnosis & Assessment' | 'Cultural & Community Support' | 'Logistics & Rights';
 }

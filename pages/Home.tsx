@@ -140,7 +140,7 @@ const Home: React.FC = () => {
       </section>
 
       {/* Testimonials Preview */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-3xl font-display font-bold text-slate-800 mb-12">Trusted by Twin Cities families</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -156,7 +156,7 @@ const Home: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 bg-brand-600 text-white text-center">

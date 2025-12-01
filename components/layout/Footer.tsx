@@ -53,19 +53,17 @@ const Footer: React.FC = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-display font-bold text-slate-800 mb-4">Contact Us</h3>
+            <h3 className="font-display font-bold text-slate-800 mb-4">Our Locations</h3>
             <ul className="space-y-4">
-               <li className="flex items-start gap-3 text-sm text-slate-500 pt-2">
-                <MapPin className="text-brand-500 shrink-0" size={18} />
-                <div className="space-y-2">
-                  {SITE_CONFIG.contact.locations.map((loc, idx) => (
-                    <div key={idx} className="flex flex-col">
-                      <span className="font-semibold text-slate-700">{loc.name}</span>
-                      <span>{loc.address}</span>
-                    </div>
-                  ))}
-                </div>
-              </li>
+              {SITE_CONFIG.contact.locations.map((loc, idx) => (
+                <li key={idx} className="flex items-start gap-3 text-sm text-slate-500">
+                  <MapPin className="text-brand-500 shrink-0 mt-0.5" size={18} />
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-slate-700">{loc.name}</span>
+                    <span>{loc.address}</span>
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
 
