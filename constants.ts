@@ -1,5 +1,6 @@
 import { Heart, MessageCircle, Puzzle, Users, Brain, MapPin } from 'lucide-react';
 import { NavItem, Service, TeamMember, Testimonial, Resource } from './types';
+import { ROUTES } from './config/routes';
 
 // Site Configuration
 export const SITE_CONFIG = {
@@ -32,19 +33,19 @@ export const SITE_CONFIG = {
 };
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Home', path: '/' },
-  { label: 'About', path: '/about' },
-  { label: 'Services', path: '/services' },
-  { label: 'Team', path: '/team' },
-  { label: 'Resources', path: '/resources' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'Home', path: ROUTES.HOME },
+  { label: 'About', path: ROUTES.ABOUT },
+  { label: 'Services', path: ROUTES.SERVICES },
+  { label: 'Team', path: ROUTES.TEAM },
+  { label: 'Resources', path: ROUTES.RESOURCES },
+  { label: 'Contact', path: ROUTES.CONTACT },
 ];
 
 export const FOOTER_NAV_ITEMS: NavItem[] = [
-  { label: 'About', path: '/about' },
-  { label: 'Services', path: '/services' },
-  { label: 'Resources', path: '/resources' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'About', path: ROUTES.ABOUT },
+  { label: 'Services', path: ROUTES.SERVICES },
+  { label: 'Resources', path: ROUTES.RESOURCES },
+  { label: 'Contact', path: ROUTES.CONTACT },
 ];
 
 export const SERVICES: Service[] = [
@@ -54,7 +55,7 @@ export const SERVICES: Service[] = [
     description: 'Early Intensive Developmental and Behavioral Intervention (EIDBI) is a Minnesota Health Care Program benefit for people under age 21.',
     icon: Heart,
     benefits: ['Medically necessary treatment', 'Covered by Medical Assistance', 'Culturally responsive'],
-    image: 'https://images.unsplash.com/photo-1596464716127-f9a804e0693e?auto=format&fit=crop&q=80&w=800'
+    image: '/eidbi-services.jpeg'
   },
   {
     id: 'aba',
@@ -62,7 +63,7 @@ export const SERVICES: Service[] = [
     description: 'Individualized, evidence-based ABA therapy focused on skill acquisition, communication, and reducing challenging behaviors.',
     icon: Puzzle,
     benefits: ['1:1 Direct Intervention', 'Customized Learning Plans', 'Skill Building'],
-    image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?auto=format&fit=crop&q=80&w=800'
+    image: '/success-high-five.jpeg'
   },
   {
     id: 'social',
@@ -78,7 +79,7 @@ export const SERVICES: Service[] = [
     description: 'Ongoing supervision by Qualified Supervising Professionals (QSP) to ensure treatment fidelity and progress.',
     icon: Brain,
     benefits: ['Clinical Oversight', 'Plan Adjustment', 'Quality Assurance'],
-    image: 'https://images.unsplash.com/photo-1632053001099-0e44299b6623?auto=format&fit=crop&q=80&w=800'
+    image: '/observation-direction.jpeg'
   },
   {
     id: 'family',
@@ -86,7 +87,7 @@ export const SERVICES: Service[] = [
     description: 'Empowering parents with strategies to support their child’s development at home and navigate the system.',
     icon: MessageCircle,
     benefits: ['Home Strategies', 'Advocacy Support', 'Family Harmony'],
-    image: 'https://images.unsplash.com/photo-1543666277-c9de754d922a?auto=format&fit=crop&q=80&w=800'
+    image: '/family-collaboration.jpeg'
   },
 ];
 

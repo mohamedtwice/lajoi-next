@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { Menu, X, Sun } from 'lucide-react';
 import { NAV_ITEMS, SITE_CONFIG } from '../../constants';
+import { ROUTES } from '../../config/routes';
 import Button from '../ui/Button';
 
 const Navbar: React.FC = () => {
@@ -14,7 +15,7 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
+          <Link to={ROUTES.HOME} className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
             <div className="hidden bg-brand-100 p-2 rounded-full text-brand-600">
               <Sun size={28} strokeWidth={2.5} />
             </div>
@@ -38,7 +39,7 @@ const Navbar: React.FC = () => {
                 {item.label}
               </NavLink>
             ))}
-            <Button href="/book-consultation" size="sm" variant="primary">
+            <Button href={ROUTES.BOOK_CONSULTATION} size="sm" variant="primary">
               Book Consultation
             </Button>
           </div>
@@ -77,7 +78,7 @@ const Navbar: React.FC = () => {
               </NavLink>
             ))}
             <div className="pt-4 px-4">
-              <Button href="/book-consultation" className="w-full" onClick={() => setIsOpen(false)}>
+              <Button href={ROUTES.BOOK_CONSULTATION} className="w-full" onClick={() => setIsOpen(false)}>
                 Book Consultation
               </Button>
             </div>

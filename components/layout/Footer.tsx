@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Sun } from 'lucide-react';
 import { SITE_CONFIG, FOOTER_NAV_ITEMS } from '../../constants';
+import { ROUTES } from '../../config/routes';
 
 const Footer: React.FC = () => {
   return (
@@ -97,7 +98,7 @@ const Footer: React.FC = () => {
 
         <div className="mt-12 pt-8 border-t border-slate-100 text-center">
           <p className="text-slate-400 text-sm">
-            &copy; {new Date().getFullYear()} <a href="/" className="text-brand-600 hover:text-brand-700 transition-colors">{SITE_CONFIG.name}</a>. All rights reserved. Powered by <a href="https://bsmg.co/" className="text-brand-600 hover:text-brand-700 transition-colors">BSMG Digital</a>.
+            &copy; {new Date().getFullYear()} <Link to={ROUTES.HOME} className="text-brand-600 hover:text-brand-700 transition-colors">{SITE_CONFIG.name}</Link>. All rights reserved. Powered by <a href="https://bsmg.co/" className="text-brand-600 hover:text-brand-700 transition-colors">BSMG Digital</a>.
           </p>
         </div>
       </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { SERVICES } from '../constants';
+import { ROUTES } from '../config/routes';
 import Button from '../components/ui/Button';
 
 const Services: React.FC = () => {
@@ -29,7 +30,7 @@ const Services: React.FC = () => {
                To access EIDBI services, a Comprehensive Multi-Disciplinary Evaluation (CMDE) is required. While we focus on treatment, we can refer you to trusted diagnostic partners like the Rosenberg Center.
              </p>
            </div>
-           <Button href="/book-consultation" variant="outline" size="sm" className="shrink-0">
+           <Button href={ROUTES.BOOK_CONSULTATION} variant="outline" size="sm" className="shrink-0">
              Contact for Referral
            </Button>
         </div>
@@ -78,7 +79,7 @@ const Services: React.FC = () => {
         <div className="bg-brand-600 rounded-3xl p-12 text-center text-white mt-16">
           <h2 className="text-2xl font-bold mb-4">Not sure if you qualify?</h2>
           <p className="mb-8 text-brand-100">Our team can help verify your eligibility for Medical Assistance or private insurance coverage.</p>
-          <Button href="/book-consultation" variant="secondary">Contact Us for Guidance</Button>
+          <Button href={ROUTES.BOOK_CONSULTATION} variant="secondary">Contact Us for Guidance</Button>
         </div>
       </div>
     </div>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { CheckCircle, Calendar, ArrowLeft, ShieldCheck, Clock, Check } from 'lucide-react';
 import Button from '../components/ui/Button';
 import { Link } from 'react-router-dom';
+import { ROUTES } from '../config/routes';
 
 const BookConsultation: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -46,8 +47,8 @@ const BookConsultation: React.FC = () => {
             Thank you, {formData.parentName}. We have received your consultation request. A member of our intake team will call you at <strong>{formData.phone}</strong> within 24 hours to confirm details.
           </p>
           <div className="space-y-3">
-            <Button href="/" className="w-full">Return Home</Button>
-            <Button href="/resources" variant="ghost" className="w-full">Browse Resources</Button>
+            <Button href={ROUTES.HOME} className="w-full">Return Home</Button>
+            <Button href={ROUTES.RESOURCES} variant="ghost" className="w-full">Browse Resources</Button>
           </div>
         </div>
       </div>
@@ -59,7 +60,7 @@ const BookConsultation: React.FC = () => {
       {/* Header */}
       <div className="bg-white border-b border-brand-100">
         <div className="max-w-3xl mx-auto px-4 py-8">
-          <Link to="/" className="inline-flex items-center text-slate-500 hover:text-brand-600 mb-6 transition-colors font-medium text-sm">
+          <Link to={ROUTES.HOME} className="inline-flex items-center text-slate-500 hover:text-brand-600 mb-6 transition-colors font-medium text-sm">
             <ArrowLeft size={16} className="mr-1" /> Back to Home
           </Link>
           <h1 className="text-3xl md:text-4xl font-display font-bold text-slate-900 mb-2">

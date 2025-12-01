@@ -5,15 +5,16 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Team from './pages/Team';
-import Contact from './pages/Contact';
 import Resources from './pages/Resources';
+import Contact from './pages/Contact';
 import BookConsultation from './pages/BookConsultation';
+import NotFound from './pages/NotFound';
 
 // Scroll to top on route change
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'instant' });
   }, [pathname]);
   return null;
 };
@@ -31,6 +32,7 @@ const App: React.FC = () => {
           <Route path="/resources" element={<Resources />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/book-consultation" element={<BookConsultation />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </Router>
