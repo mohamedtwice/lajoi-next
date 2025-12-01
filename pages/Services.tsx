@@ -19,7 +19,7 @@ const Services: React.FC = () => {
         {/* Referral Note */}
         <div className="bg-blue-50 border border-blue-100 rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center justify-between">
            <img 
-             src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&q=80&w=800" 
+             src="/clinical-consult.jpeg" 
              alt="Doctor consulting with a child" 
              className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-md shrink-0 border-4 border-white"
            />
