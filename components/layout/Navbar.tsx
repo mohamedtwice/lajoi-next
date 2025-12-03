@@ -11,17 +11,18 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-warm-50/80 backdrop-blur-md border-b border-brand-100">
+    <nav className="sticky top-0 z-50 w-full bg-white py-3 backdrop-blur-md ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <Link to={ROUTES.HOME} className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-            <div className="hidden bg-brand-100 p-2 rounded-full text-brand-600">
+            {/* <div className="hidden bg-brand-100 p-2 rounded-full text-brand-600">
               <Sun size={28} strokeWidth={2.5} />
             </div>
             <span className="font-display font-bold text-2xl md:text-3xl text-slate-800 tracking-tight">
               {SITE_CONFIG.shortname} <span className="md:hidden lg:inline-block">Autism Center</span>
-            </span>
+            </span> */}
+            <img src="/lajoie-logo.png" alt="LaJoie Logo" width={76} height={65} />
           </Link>
 
           {/* Desktop Nav */}

@@ -8,23 +8,20 @@ export const SITE_CONFIG = {
   shortname: "LaJoie",
   tagline: "Culturally competent, community-focused care for the Twin Cities.",
   contact: {
-    phone: "(651) 555-0199",
-    email: "info@lajoieautism.com",
+    phone: "(612) 458-7852",
+    fax: "(612) 605-0040",
+    email: "lajoieautismcenter@gmail.com",
     // Primary listing for display logic, but detailed locations are below
-    address: "Roseville & NE Minneapolis", 
+    address: "St. Paul", 
     locations: [
       {
-        name: "Roseville Clinical Hub",
-        address: "1935 County Rd B2 W, Unit 350, Roseville, MN 55113",
-        note: "Located in the Medical Professional Building"
-      },
-      {
-        name: "NE Minneapolis Community Hub",
-        address: "2300 University Ave NE, Minneapolis, MN 55418",
-        note: "Accessible via Transit"
+        name: "LaJoie Autism Center",
+        address: "1935 County Road B2 W, Unit 350, St. Paul, MN 55113",
+        note: "Center based services"
       }
     ],
     hours: "Mon-Fri: 8am - 6pm",
+    executiveDirector: "Houssein ALI MEAD",
   },
   socials: {
     instagram: "#",
@@ -64,7 +61,7 @@ export const SERVICES: Service[] = [
     description: 'Individualized, evidence-based ABA therapy focused on skill acquisition, communication, and reducing challenging behaviors.',
     icon: Puzzle,
     benefits: ['1:1 Direct Intervention', 'Customized Learning Plans', 'Skill Building'],
-    image: '/success-high-five.jpeg'
+    image: '/clinical-consult.jpeg'
   },
   {
     id: 'social',
@@ -72,7 +69,7 @@ export const SERVICES: Service[] = [
     description: 'Facilitated groups for various ages (Pre-K through High School) to practice peer interaction in a safe environment.',
     icon: Users,
     benefits: ['Peer Interaction', 'Emotional Regulation', 'Turn-Taking'],
-    image: 'https://images.unsplash.com/photo-1503919545874-0763d9316531?auto=format&fit=crop&q=80&w=800'
+    image: '/success-high-five.jpeg'
   },
   {
     id: 'observation',

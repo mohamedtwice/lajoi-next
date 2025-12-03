@@ -39,9 +39,9 @@ const Resources: React.FC = () => {
   const getCategoryColors = (category: string) => {
     switch (category) {
       case 'Diagnosis & Assessment':
-        return 'bg-blue-100 text-blue-600';
+        return 'bg-brand-100 text-brand-600';
       case 'Cultural & Community Support':
-        return 'bg-purple-100 text-purple-600';
+        return 'bg-yellow-100 text-yellow-600';
       case 'Logistics & Rights':
         return 'bg-green-100 text-green-600';
       default:
@@ -72,7 +72,7 @@ const Resources: React.FC = () => {
       </div>
 
       {/* Category Filter */}
-      <div className="bg-slate-50 border-b border-slate-200">
+      <div className="bg-brand-50 border-b border-brand-100">
         <div className="max-w-4xl mx-auto px-4 py-6">
           <div className="flex flex-wrap gap-3 justify-center">
             <button

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#f0fdfa" />
+    <meta name="theme-color" content="#fffde7" />
     <title>LaJoie Autism Center | Twin Cities EIDBI Provider</title>
     <meta name="description" content="Compassionate, evidence-based therapy for children and families." />
     
@@ -23,27 +23,39 @@
               display: ['Quicksand', 'sans-serif'],
             },
             colors: {
+              /* Palette now tied directly to logo colors:
+                 #376191 (blue), #EDBF2D (yellow), #54934C (green), #E7702F (orange)
+              */
               brand: {
-                50: '#f0fdfa', // Very light teal
-                100: '#ccfbf1',
-                200: '#99f6e4',
-                300: '#5eead4',
-                400: '#2dd4bf',
-                500: '#14b8a6', // Primary Brand Color
-                600: '#0d9488',
-                700: '#0f766e',
-                800: '#115e59',
-                900: '#134e4a',
+                50: '#e4ebf4',
+                100: '#c9d7e9',
+                200: '#90aecd',
+                300: '#688bb3',
+                400: '#4b719f',
+                500: '#376191', // primary logo blue
+                600: '#2f537c',
+                700: '#264262',
+                800: '#1d3249',
+                900: '#142335',
               },
               warm: {
-                50: '#fdfbf7', // Warm off-white
-                100: '#f3eadd', // Sand
-                200: '#e6d5bc',
+                50: '#fff8dc',
+                100: '#ffeeb0',
+                200: '#EDBF2D', // logo yellow
               },
               accent: {
-                light: '#ffe4e6', // Soft pink
-                DEFAULT: '#fda4af', // Rose
-                dark: '#e11d48',
+                light: '#ffe0c9',
+                DEFAULT: '#E7702F', // logo orange
+                dark: '#c25624',
+              },
+              support: {
+                50: '#e2f2e3',
+                100: '#c0e2c3',
+                200: '#97cea0',
+                300: '#72b980',
+                400: '#5ea96c',
+                500: '#54934C', // logo green
+                600: '#457840',
               }
             },
             animation: {
@@ -69,7 +81,7 @@
       html { scroll-behavior: smooth; }
       /* Focus accessibility */
       :focus-visible {
-        outline: 2px solid #0d9488;
+        outline: 2px solid #376191;
         outline-offset: 2px;
       }
     </style>

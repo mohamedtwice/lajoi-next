@@ -6,9 +6,9 @@ const About: React.FC = () => {
     <div className="pb-20">
       <div className="bg-white py-16">
          <div className="max-w-3xl mx-auto px-4 text-center">
-            <h1 className="text-4xl font-display font-bold text-slate-900 mb-6">Our Mission</h1>
+            <h1 className="text-4xl font-display font-bold text-slate-900 mb-6">About LaJoie</h1>
             <p className="text-xl text-slate-600 leading-relaxed">
-              To provide accessible, culturally competent, and effective autism therapy to underserved communities in the Twin Cities.
+            We provide accessible, culturally competent, and effective autism therapy to underserved communities in the Twin Cities.
             </p>
          </div>
       </div>
@@ -24,12 +24,13 @@ const About: React.FC = () => {
             />
           </div>
           <div className="space-y-6">
-            <h2 className="text-3xl font-display font-bold text-slate-800">Why LaJoie?</h2>
+            <h2 className="text-3xl font-display font-bold text-slate-800">Our Mission</h2>
+            <p className="text-slate-600 leading-relaxed">
+          LaJoie Autism Center's paramount goal is to foster joy and empowerment. With our steadfast dedication to best practices, we provide tailored interventions that nurture skill development, self-discovery, and meaningful connections.
+          </p>
+          <h2 className="text-3xl font-display font-bold text-slate-800">Why LaJoie?</h2>
             <p className="text-slate-600 leading-relaxed">
               LaJoie Autism Center was founded on the belief that high-quality therapy should be accessible to everyone, regardless of zip code or language. We operate as a community anchor, bridging the gap between clinical diagnoses and day-to-day support.
-            </p>
-            <p className="text-slate-600 leading-relaxed">
-              We have withstood industry challenges to remain a stable, verified, and high-risk compliant provider. By locating our centers in accessible hubs—like our Roseville medical suite and our Northeast Minneapolis community location—we ensure families can get the care they need, when they need it.
             </p>
           </div>
         </div>

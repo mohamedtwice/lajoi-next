@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, MapPin, Phone, Clock } from 'lucide-react';
+import { Mail, MapPin, Phone, Clock, Printer } from 'lucide-react';
 import { SITE_CONFIG } from '../constants';
 import Button from '../components/ui/Button';
 
@@ -70,6 +70,16 @@ const Contact: React.FC = () => {
                 </div>
               </div>
               
+              {SITE_CONFIG.contact.fax && (
+                <div className="flex items-start gap-4">
+                  <Printer className="text-brand-500 shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-semibold text-slate-800">Fax</h4>
+                    <p className="text-slate-600">{SITE_CONFIG.contact.fax}</p>
+                  </div>
+                </div>
+              )}
+              
               <div className="flex items-start gap-4">
                 <Mail className="text-brand-500 shrink-0 mt-1" />
                 <div>
@@ -88,9 +98,11 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Simple Map Placeholder */}
-            <div className="mt-10 h-48 bg-slate-200 rounded-xl flex items-center justify-center text-slate-500 p-4 text-center text-sm">
-              [Serving Ramsey & Hennepin Counties]
+            <div className="mt-10 h-48 bg-slate-200 rounded-xl flex items-center justify-center text-slate-500 text-center text-sm">
+              <img src="/mpls-stp.jpeg" alt="Serving Ramsey & Hennepin Counties" className="w-full h-full object-cover" />
+              {/* [Serving Ramsey & Hennepin Counties] */}
             </div>
+            <p className="text-slate-600 text-center text-sm mt-2">Serving Ramsey & Hennepin Counties</p>
           </div>
 
           {/* Form */}

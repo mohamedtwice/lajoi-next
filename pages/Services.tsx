@@ -6,23 +6,36 @@ import Button from '../components/ui/Button';
 const Services: React.FC = () => {
   return (
     <div className="bg-warm-50 min-h-screen pb-20">
-      <div className="bg-white py-16 border-b border-brand-100">
+      <div className="bg-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl font-display font-bold text-slate-900 mb-6">Therapeutic Services</h1>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto mb-6">
             Our multidisciplinary approach ensures that every aspect of your child's development is supported under one roof.
           </p>
+          {/* <div className="max-w-4xl mx-auto mt-8 bg-brand-50 rounded-2xl p-8 text-left">
+            <h2 className="text-2xl font-display font-bold text-slate-800 mb-4">Target Population</h2>
+            <p className="text-slate-600 leading-relaxed mb-6">
+              LaJoie Autism Center serves people between the ages of 18 months-21 years old. Clients will receive center based services.
+            </p>
+            <h2 className="text-2xl font-display font-bold text-slate-800 mb-4">Methods and Modalities</h2>
+            <p className="text-slate-600 leading-relaxed mb-4">
+              LaJoie Autism Center's EIDBI program uses Applied Behavior Analysis (ABA) therapy modality. ABA therapy is a science that seeks to understand, predict, and change behavior. Most professionals who work in the field of behavior analysis work in behavior intervention for children with ASD, an approach used to shape the behavior of children. We will only be addressing ABA as an intervention therapy for children with Autism. Applied Behavior Analysis is the use of behavior principles to solve practical problems.
+            </p>
+            <p className="text-slate-600 leading-relaxed">
+              ABA uses operant conditioning and positive reinforcement (praise and rewards) to "program" desired behaviors.
+            </p>
+          </div> */}
         </div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 space-y-12">
         
         {/* Referral Note */}
-        <div className="bg-blue-50 border border-blue-100 rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center justify-between">
+        <div className="bg-blue-50 rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center justify-between">
            <img 
              src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&q=80&w=800" 
              alt="Doctor consulting with a child" 
-             className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-md shrink-0 border-4 border-white"
+             className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shrink-0 "
            />
            <div className="flex-1 text-center md:text-left">
              <h3 className="font-bold text-slate-800 text-xl mb-2">Looking for a Diagnosis?</h3>
@@ -30,7 +43,7 @@ const Services: React.FC = () => {
                To access EIDBI services, a Comprehensive Multi-Disciplinary Evaluation (CMDE) is required. While we focus on treatment, we can refer you to trusted diagnostic partners like the Rosenberg Center.
              </p>
            </div>
-           <Button href={ROUTES.BOOK_CONSULTATION} variant="outline" size="sm" className="shrink-0">
+           <Button href={ROUTES.CONTACT} variant="outline" size="sm" className="shrink-0">
              Contact for Referral
            </Button>
         </div>
@@ -79,7 +92,7 @@ const Services: React.FC = () => {
         <div className="bg-brand-600 rounded-3xl p-12 text-center text-white mt-16">
           <h2 className="text-2xl font-bold mb-4">Not sure if you qualify?</h2>
           <p className="mb-8 text-brand-100">Our team can help verify your eligibility for Medical Assistance or private insurance coverage.</p>
-          <Button href={ROUTES.BOOK_CONSULTATION} variant="secondary">Contact Us for Guidance</Button>
+          <Button href={ROUTES.CONTACT} variant="secondary">Contact Us for Guidance</Button>
         </div>
       </div>
     </div>
