@@ -1,93 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#fffde7" />
-    <title>LaJoie Autism Center | Twin Cities EIDBI Provider</title>
-    <meta name="description" content="Compassionate, evidence-based therapy for children and families." />
-    
-    <!-- Fonts: Quicksand for headings (friendly), Inter for body (readable) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Tailwind -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              display: ['Quicksand', 'sans-serif'],
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#fffde7" />
+  <title>LaJoie Autism Center | Twin Cities EIDBI Provider</title>
+  <meta name="description" content="Compassionate, evidence-based therapy for children and families." />
+
+  <!-- Fonts: Quicksand for headings (friendly), Inter for body (readable) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Quicksand:wght@500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Quicksand', 'sans-serif'],
+          },
+          colors:              /* Palette: Primary green #76C6B7, accent orange #E7702F */
+            brand: {
+      50: '#e8f6f3',
+        100: '#d1ede7',
+          200: '#a3dbcf',
+            300: '#8fd1c3',
+              400: '#76C6B7', // primary green
+                500: '#76C6B7', // primary green
+                  600: '#5fb3a3',
+                    700: '#4a9a8c',
+                      800: '#3a7a6f',
+                        900: '#2a5a52',
             },
-            colors: {
-              /* Palette now tied directly to logo colors:
-                 #376191 (blue), #EDBF2D (yellow), #54934C (green), #E7702F (orange)
-              */
-              brand: {
-                50: '#e4ebf4',
-                100: '#c9d7e9',
-                200: '#90aecd',
-                300: '#688bb3',
-                400: '#4b719f',
-                500: '#376191', // primary logo blue
-                600: '#2f537c',
-                700: '#264262',
-                800: '#1d3249',
-                900: '#142335',
-              },
-              warm: {
-                50: '#fff8dc',
-                100: '#ffeeb0',
-                200: '#EDBF2D', // logo yellow
-              },
-              accent: {
-                light: '#ffe0c9',
-                DEFAULT: '#E7702F', // logo orange
-                dark: '#c25624',
-              },
-              support: {
-                50: '#e2f2e3',
-                100: '#c0e2c3',
-                200: '#97cea0',
-                300: '#72b980',
-                400: '#5ea96c',
+    warm: {
+      50: '#f0faf8',
+        100: '#d1ede7',
+          200: '#a3dbcf', // matches brand-200
+            },
+    accent: {
+      light: '#ffe0c9',
+        DEFAULT: '#E7702F', // logo orange
+          dark: '#c25624',
+            },
+    support: {
+      50: '#e2f2e3',
+        100: '#c0e2c3',
+          200: '#97cea0',
+            300: '#72b980',
+              400: '#5ea96c',
                 500: '#54934C', // logo green
-                600: '#457840',
-              }
-            },
-            animation: {
-              'float': 'float 6s ease-in-out infinite',
-              'fade-in': 'fadeIn 0.5s ease-out forwards',
-            },
-            keyframes: {
-              float: {
-                '0%, 100%': { transform: 'translateY(0)' },
-                '50%': { transform: 'translateY(-10px)' },
-              },
-              fadeIn: {
-                '0%': { opacity: '0', transform: 'translateY(10px)' },
-                '100%': { opacity: '1', transform: 'translateY(0)' },
-              }
+                  600: '#457840',
             }
-          }
+          },
+    animation: {
+      'float': 'float 6s ease-in-out infinite',
+        'fade-in': 'fadeIn 0.5s ease-out forwards',
+          },
+    keyframes: {
+      float: {
+        '0%, 100%': { transform: 'translateY(0)' },
+        '50%': { transform: 'translateY(-10px)' },
+      },
+      fadeIn: {
+        '0%': { opacity: '0', transform: 'translateY(10px)' },
+        '100%': { opacity: '1', transform: 'translateY(0)' },
+      }
+    }
         }
       }
-    </script>
-    <style>
-      /* Smooth scrolling */
-      html { scroll-behavior: smooth; }
-      /* Focus accessibility */
-      :focus-visible {
-        outline: 2px solid #376191;
-        outline-offset: 2px;
-      }
-    </style>
-  </head>
-  <body class="bg-warm-50 text-slate-700 antialiased">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+    }
+  </script>
+  <style>
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Focus accessibility */
+    :focus-visible {
+      outline: 2px solid #76C6B7;
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+
+<body class="bg-warm-50 text-slate-700 antialiased">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>

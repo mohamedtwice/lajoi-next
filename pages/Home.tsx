@@ -39,12 +39,12 @@ const Home: React.FC = () => {
                 <span className="flex items-center gap-1"><MapPin size={16} className="text-brand-500" /> NE Minneapolis</span>
               </div> */}
             </div>
-            
+
             <div className="relative mx-auto w-full max-w-3xl lg:max-w-none">
               <div className="relative rounded-3xl overflow-hidden shadow-2xl shadow-brand-100/50 aspect-[4/3] transform rotate-2 hover:rotate-0 transition-transform duration-500 bg-brand-100">
-                <img 
-                  src="/hero-boy.jpeg" 
-                  alt="Young boy smiling at LaJoie Autism Center" 
+                <img
+                  src="/hero-boy.jpeg"
+                  alt="Young boy smiling at LaJoie Autism Center"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
@@ -85,7 +85,7 @@ const Home: React.FC = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="mt-12 text-center">
             <Button href={ROUTES.SERVICES} variant="outline" className="gap-2">
               View All EIDBI Services <ArrowRight size={16} />
@@ -96,16 +96,16 @@ const Home: React.FC = () => {
 
       {/* Visual / Vibe Section */}
       <section className="py-20 bg-brand-50 relative overflow-hidden">
-         {/* Decorative pattern */}
-         <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#0d9488 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
+        {/* Decorative pattern */}
+        <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(#0d9488 1px, transparent 1px)', backgroundSize: '32px 32px' }}></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="lg:flex items-center gap-16">
             <div className="lg:w-1/2 mb-10 lg:mb-0">
-               <div className="grid grid-cols-2 gap-4">
-                 <img src="/individualized-therapy.jpeg" alt="Therapist laughing with a child" className="rounded-2xl shadow-lg mt-8 object-cover h-64 w-full" />
-                 <img src="/lajoie-services.jpeg" alt="Child high-fiving therapist" className="rounded-2xl shadow-lg object-cover h-64 w-full" />
-               </div>
+              <div className="grid grid-cols-2 gap-4">
+                <img src="/individualized-therapy.jpeg" alt="Therapist laughing with a child" className="rounded-2xl shadow-lg mt-8 object-cover h-64 w-full" />
+                <img src="/lajoie-services.jpeg" alt="Child high-fiving therapist" className="rounded-2xl shadow-lg object-cover h-64 w-full" />
+              </div>
             </div>
             <div className="lg:w-1/2">
               <h2 className="text-3xl font-display font-bold text-slate-800 mb-6">
@@ -125,7 +125,7 @@ const Home: React.FC = () => {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                   <div className="bg-white p-2 rounded-lg shadow-sm text-brand-500">
+                  <div className="bg-white p-2 rounded-lg shadow-sm text-brand-500">
                     <Heart size={20} />
                   </div>
                   <div>
