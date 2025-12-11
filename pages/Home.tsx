@@ -163,7 +163,7 @@ const Home: React.FC = () => {
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Ready to start your journey?</h2>
           <p className="text-brand-100 text-lg mb-8 max-w-2xl mx-auto">
-            We accept Medical Assistance (Medicaid), TEFRA, and most private insurance plans.
+              Get started today with a free consultation. Our team will guide you through the process and answer any questions you have about our services.
           </p>
           <Button href={ROUTES.BOOK_CONSULTATION} variant="secondary" size="lg">
             Contact Us Today
