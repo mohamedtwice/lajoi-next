@@ -16,7 +16,7 @@ const About: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
           <div className="relative">
-            <div className="absolute inset-0 bg-brand-200 rounded-3xl transform rotate-3 translate-x-2 translate-y-2"></div>
+            <div className="absolute inset-0 bg-secondary rounded-3xl transform rotate-3 translate-x-2 translate-y-2"></div>
             <img 
               src="/community-collage.jpeg" 
               alt="Diverse group of smiling children" 
@@ -36,7 +36,7 @@ const About: React.FC = () => {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-brand-50 p-8 rounded-2xl">
+          <div className="bg-[#E3EBF4] p-8 rounded-2xl">
             <div className="bg-white w-12 h-12 rounded-full flex items-center justify-center text-brand-500 mb-4 shadow-sm">
               <Smile size={24} />
             </div>

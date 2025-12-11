@@ -40,7 +40,7 @@ const Navbar: React.FC = () => {
                 {item.label}
               </NavLink>
             ))}
-            <Button href={ROUTES.BOOK_CONSULTATION} size="lg" variant="primary">
+            <Button href={ROUTES.BOOK_CONSULTATION} size="lg" className="bg-secondary text-white">
               Book Consultation
             </Button>
           </div>

@@ -159,7 +159,7 @@ const Home: React.FC = () => {
       </section> */}
 
       {/* CTA Section */}
-      <section className="py-20 bg-brand-600 text-white text-center">
+      <section className="py-20 bg-secondary-light text-white text-center">
         <div className="max-w-4xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-6">Ready to start your journey?</h2>
           <p className="text-brand-100 text-lg mb-8 max-w-2xl mx-auto">

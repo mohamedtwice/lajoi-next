@@ -98,11 +98,10 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Simple Map Placeholder */}
-            <div className="mt-10 h-48 bg-slate-200 rounded-xl flex items-center justify-center text-slate-500 text-center text-sm">
+            {/* <div className="mt-10 h-48 bg-slate-200 rounded-xl flex items-center justify-center text-slate-500 text-center text-sm">
               <img src="/mpls-stp.jpeg" alt="Serving Ramsey & Hennepin Counties" className="w-full h-full object-cover" />
-              {/* [Serving Ramsey & Hennepin Counties] */}
             </div>
-            <p className="text-slate-600 text-center text-sm mt-2">Serving Ramsey & Hennepin Counties</p>
+            <p className="text-slate-600 text-center text-sm mt-2">Serving Ramsey & Hennepin Counties</p> */}
           </div>
 
           {/* Form */}

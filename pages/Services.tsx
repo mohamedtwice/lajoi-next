@@ -31,7 +31,7 @@ const Services: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 space-y-12">
         
         {/* Referral Note */}
-        <div className="bg-blue-50 rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center justify-between">
+        <div className="bg-white rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center justify-between">
            <img 
              src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&q=80&w=800" 
              alt="Doctor consulting with a child" 
