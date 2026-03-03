@@ -29,28 +29,28 @@ const Services: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 space-y-12">
-        
+
         {/* Referral Note */}
         <div className="bg-white rounded-3xl p-8 flex flex-col md:flex-row gap-8 items-center justify-between">
-           <img 
-             src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&q=80&w=800" 
-             alt="Doctor consulting with a child" 
-             className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shrink-0 "
-           />
-           <div className="flex-1 text-center md:text-left">
-             <h3 className="font-bold text-slate-800 text-xl mb-2">Looking for a Diagnosis?</h3>
-             <p className="text-slate-600">
-               To access EIDBI services, a Comprehensive Multi-Disciplinary Evaluation (CMDE) is required. While we focus on treatment, we can refer you to trusted diagnostic partners like the Rosenberg Center.
-             </p>
-           </div>
-           <Button href={ROUTES.CONTACT} variant="outline" size="sm" className="shrink-0">
-             Contact for Referral
-           </Button>
+          <img
+            src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634?auto=format&fit=crop&q=80&w=800"
+            alt="Doctor consulting with a child"
+            className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shrink-0 "
+          />
+          <div className="flex-1 text-center md:text-left">
+            <h3 className="font-bold text-slate-800 text-xl mb-2">Looking for a Diagnosis?</h3>
+            <p className="text-slate-600">
+              To access EIDBI services, a Comprehensive Multi-Disciplinary Evaluation (CMDE) is required. We have experienced, licensed clinicians who can complete this evaluation for your child in a supportive and family-centered setting.
+            </p>
+          </div>
+          <Button href={ROUTES.CONTACT} variant="outline" size="sm" className="shrink-0">
+            Contact for Referral
+          </Button>
         </div>
 
         {SERVICES.map((service, index) => (
-          <div 
-            key={service.id} 
+          <div
+            key={service.id}
             className={`flex flex-col md:flex-row gap-8 items-center bg-white p-8 md:p-12 rounded-3xl shadow-sm ${index % 2 === 1 ? 'md:flex-row-reverse' : ''}`}
           >
             <div className="flex-1 space-y-6">
@@ -63,7 +63,7 @@ const Services: React.FC = () => {
               <p className="text-slate-600 text-lg leading-relaxed">
                 {service.description}
               </p>
-              
+
               <div className="bg-warm-50 rounded-xl p-6">
                 <h3 className="font-semibold text-slate-800 mb-4">Key Benefits:</h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -79,11 +79,11 @@ const Services: React.FC = () => {
 
             <div className="flex-1 w-full">
               <div className="w-full aspect-video rounded-2xl overflow-hidden shadow-lg relative bg-brand-50">
-                 <img 
-                   src={service.image} 
-                   alt={service.title} 
-                   className="w-full h-full object-cover transition-transform duration-700 hover:scale-105" 
-                 />
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                />
               </div>
             </div>
           </div>
