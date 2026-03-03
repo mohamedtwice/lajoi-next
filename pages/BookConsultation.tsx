@@ -3,12 +3,15 @@ import { CheckCircle, Calendar, ArrowLeft, ShieldCheck, Clock, Check } from 'luc
 import Button from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../config/routes';
+import { submitToWebhook } from '../config/webhook';
 
 const BookConsultation: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
-    parentName: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
     childAge: '',
@@ -23,16 +26,19 @@ const BookConsultation: React.FC = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setError(null);
+    try {
+      await submitToWebhook('consultation', formData);
       setIsSuccess(true);
       window.scrollTo(0, 0);
-    }, 1500);
+    } catch {
+      setError('Something went wrong. Please try again or call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSuccess) {
@@ -44,7 +50,7 @@ const BookConsultation: React.FC = () => {
           </div>
           <h2 className="text-3xl font-display font-bold text-slate-800 mb-4">Request Received!</h2>
           <p className="text-slate-600 mb-8 text-lg leading-relaxed">
-            Thank you, {formData.parentName}. We have received your consultation request. A member of our intake team will call you at <strong>{formData.phone}</strong> within 24 hours to confirm details.
+            Thank you, {formData.firstName}. We have received your consultation request. A member of our intake team will call you at <strong>{formData.phone}</strong> within 24 hours to confirm details.
           </p>
           <div className="space-y-3">
             <Button href={ROUTES.HOME} className="w-full">Return Home</Button>
@@ -77,7 +83,11 @@ const BookConsultation: React.FC = () => {
           <div className="p-1 bg-gradient-to-r from-brand-300 to-brand-500"></div>
           
           <form onSubmit={handleSubmit} className="p-6 md:p-10 space-y-8">
-            
+            {error && (
+              <div className="p-4 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm">
+                {error}
+              </div>
+            )}
             {/* Section 1: Parent Info */}
             <div>
               <h3 className="text-lg font-bold text-slate-800 mb-4 flex items-center">
@@ -86,15 +96,28 @@ const BookConsultation: React.FC = () => {
               </h3>
               <div className="grid md:grid-cols-2 gap-5">
                 <div>
-                  <label htmlFor="parentName" className="block text-sm font-medium text-slate-700 mb-1.5">Full Name</label>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 mb-1.5">First Name</label>
                   <input
                     type="text"
-                    id="parentName"
-                    name="parentName"
+                    id="firstName"
+                    name="firstName"
                     required
                     className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all bg-slate-50 focus:bg-white"
-                    placeholder="Parent or Guardian Name"
-                    value={formData.parentName}
+                    placeholder="First Name"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                  />
+                </div>
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-medium text-slate-700 mb-1.5">Last Name</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    required
+                    className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all bg-slate-50 focus:bg-white"
+                    placeholder="Last Name"
+                    value={formData.lastName}
                     onChange={handleChange}
                   />
                 </div>
@@ -111,7 +134,7 @@ const BookConsultation: React.FC = () => {
                     onChange={handleChange}
                   />
                 </div>
-                <div className="md:col-span-2">
+                <div>
                   <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-1.5">Email Address</label>
                   <input
                     type="email"
@@ -234,7 +257,7 @@ const BookConsultation: React.FC = () => {
                 {isSubmitting ? 'Submitting Request...' : 'Request Consultation'}
               </Button>
               <div className="mt-4 flex items-center justify-center gap-4 text-xs text-slate-400">
-                <span className="flex items-center gap-1"><ShieldCheck size={12} /> HIPAA Compliant</span>
+                {/* <span className="flex items-center gap-1"><ShieldCheck size={12} /> HIPAA Compliant</span> */}
                 <span className="flex items-center gap-1"><Clock size={12} /> Fast Response</span>
               </div>
             </div>

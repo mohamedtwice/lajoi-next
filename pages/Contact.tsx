@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { Mail, MapPin, Phone, Clock, Printer } from 'lucide-react';
 import { SITE_CONFIG } from '../constants';
 import Button from '../components/ui/Button';
+import { submitToWebhook } from '../config/webhook';
 
 const Contact: React.FC = () => {
   const [formState, setFormState] = useState({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
     phone: '',
     message: '',
@@ -13,15 +15,20 @@ const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setError(null);
+    try {
+      await submitToWebhook('contact', formState);
       setSubmitted(true);
-    }, 1500);
+    } catch {
+      setError('Something went wrong. Please try again or call us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -127,7 +134,7 @@ const Contact: React.FC = () => {
                 </div>
                 <h3 className="text-2xl font-bold text-slate-800 mb-2">Message Sent!</h3>
                 <p className="text-slate-600 max-w-md">
-                  Thank you for reaching out to LaJoie. A member of our team will contact you within 24 hours.
+                  Thank you, {formState.firstName}. A member of our team will contact you within 24 hours.
                 </p>
                 <Button className="mt-8" onClick={() => setSubmitted(false)} variant="outline">
                   Send Another Message
@@ -135,21 +142,39 @@ const Contact: React.FC = () => {
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-6">
+                {error && (
+                  <div className="p-4 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm">
+                    {error}
+                  </div>
+                )}
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">Parent/Guardian Name</label>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 mb-2">First Name</label>
                     <input
                       type="text"
-                      id="name"
-                      name="name"
+                      id="firstName"
+                      name="firstName"
                       required
                       className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all"
-                      placeholder="Your Name"
-                      value={formState.name}
+                      placeholder="First Name"
+                      value={formState.firstName}
                       onChange={handleChange}
                     />
                   </div>
                   <div>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-slate-700 mb-2">Last Name</label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      required
+                      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all"
+                      placeholder="Last Name"
+                      value={formState.lastName}
+                      onChange={handleChange}
+                    />
+                  </div>
+                  <div className="md:col-span-2">
                     <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">Email Address</label>
                     <input
                       type="email"
@@ -165,7 +190,7 @@ const Contact: React.FC = () => {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
-                   <div>
+                  <div>
                     <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">Phone Number</label>
                     <input
                       type="tel"
