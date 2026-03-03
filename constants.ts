@@ -8,7 +8,10 @@ export const SITE_CONFIG = {
   shortname: "LaJoie",
   tagline: "Culturally competent, community-focused care for the Twin Cities.",
   contact: {
-    phone: "(612) 458-7852",
+    phone: {
+      direct: "(612) 458-7852",
+      work: "612-489-7059",
+    },
     fax: "(612) 605-0040",
     email: "lajoieautismcenter@gmail.com",
     // Primary listing for display logic, but detailed locations are below
@@ -20,7 +23,11 @@ export const SITE_CONFIG = {
         note: "Center based services"
       }
     ],
-    hours: "Mon-Fri: 8am - 6pm",
+    hours: [
+      { label: "Weekdays", times: "Monday–Friday 8am–6pm" },
+      { label: "Weekends", times: "Saturday/Sunday 10am–6pm" },
+    ],
+    hoursNote: "Scheduling that works for your family.",
     executiveDirector: "Houssein ALI MEAD",
   },
   socials: {

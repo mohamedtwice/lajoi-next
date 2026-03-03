@@ -66,7 +66,11 @@ const Contact: React.FC = () => {
                 <Phone className="text-brand-500 shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-slate-800">Call Us</h4>
-                  <p className="text-slate-600">{SITE_CONFIG.contact.phone}</p>
+                  <p className="text-slate-600">
+                    Direct: <a href={`tel:${SITE_CONFIG.contact.phone.direct.replace(/\D/g, '')}`} className="hover:text-brand-600">{SITE_CONFIG.contact.phone.direct}</a>
+                    <br />
+                    Work: <a href={`tel:${SITE_CONFIG.contact.phone.work.replace(/\D/g, '')}`} className="hover:text-brand-600">{SITE_CONFIG.contact.phone.work}</a>
+                  </p>
                 </div>
               </div>
               
@@ -92,7 +96,17 @@ const Contact: React.FC = () => {
                 <Clock className="text-brand-500 shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-slate-800">Hours</h4>
-                  <p className="text-slate-600">{SITE_CONFIG.contact.hours}</p>
+                  <dl className="space-y-2 text-slate-600">
+                    {SITE_CONFIG.contact.hours.map(({ label, times }, i) => (
+                      <div key={i}>
+                        {/* <dt className="text-slate-500 font-medium">{label}</dt> */}
+                        <dd className="ml-0 mt-0.5">{times}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                  {/* <p className="text-slate-500 text-sm mt-2">
+                    {SITE_CONFIG.contact.hoursNote}
+                  </p> */}
                 </div>
               </div>
             </div>
