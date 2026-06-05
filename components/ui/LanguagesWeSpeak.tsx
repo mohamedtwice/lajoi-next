@@ -82,8 +82,6 @@ const LanguagesWeSpeak: React.FC<LanguagesWeSpeakProps> = ({
         <p className="text-sm text-slate-500">{footnote ?? defaultFootnote}</p>
       </div>
 
-      {/* Structured, search-friendly description for multilingual autism searches. */}
-      <p className="sr-only">{SEO_TEXT}</p>
     </div>
   );
 };
