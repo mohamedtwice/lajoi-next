@@ -20,9 +20,6 @@ interface LanguagesWeSpeakProps {
   className?: string;
 }
 
-// Plain, search-friendly sentence describing our multilingual services.
-const SEO_TEXT = `LaJoie Autism Center serves multilingual families throughout Minnesota. Our staff members speak ${SPOKEN_LANGUAGES.slice(0, -1).join(', ')}, and ${SPOKEN_LANGUAGES[SPOKEN_LANGUAGES.length - 1]}, helping families access autism services in the language they are most comfortable using.`;
-
 const LanguagesWeSpeak: React.FC<LanguagesWeSpeakProps> = ({
   variant = 'full',
   title = 'We Speak Your Language',
