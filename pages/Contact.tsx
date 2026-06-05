@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, MapPin, Phone, Clock, Printer } from 'lucide-react';
 import { SITE_CONFIG } from '../constants';
 import Button from '../components/ui/Button';
+import LanguagesWeSpeak from '../components/ui/LanguagesWeSpeak';
 import { submitToWebhook } from '../config/webhook';
 
 const Contact: React.FC = () => {
@@ -239,6 +240,15 @@ const Contact: React.FC = () => {
               </form>
             )}
           </div>
+        </div>
+
+        {/* Languages We Speak — reassure families they can reach out in their preferred language */}
+        <div className="mt-10">
+          <LanguagesWeSpeak
+            title="Reach Out in Your Language"
+            description="You're welcome to call us or send a message in the language you're most comfortable with. Our diverse team provides support in:"
+            footnote="Prefer another language? Let us know in your message and we'll do our best to connect you with someone who can help."
+          />
         </div>
       </div>
     </div>

@@ -3,6 +3,7 @@ import { ArrowRight, Star, Heart, MapPin } from 'lucide-react';
 import Button from '../components/ui/Button';
 import { SERVICES, TESTIMONIALS } from '../constants';
 import { ROUTES } from '../config/routes';
+import LanguagesWeSpeak from '../components/ui/LanguagesWeSpeak';
 
 const Home: React.FC = () => {
   return (
@@ -51,6 +52,13 @@ const Home: React.FC = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Languages We Speak */}
+      <section className="pb-12 lg:pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <LanguagesWeSpeak />
         </div>
       </section>
 

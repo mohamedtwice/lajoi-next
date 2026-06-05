@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Mail, MapPin, Phone, Sun } from 'lucide-react';
 import { SITE_CONFIG, FOOTER_NAV_ITEMS } from '../../constants';
 import { ROUTES } from '../../config/routes';
+import LanguagesWeSpeak from '../ui/LanguagesWeSpeak';
 
 const Footer: React.FC = () => {
   return (
@@ -104,6 +105,10 @@ const Footer: React.FC = () => {
                 <Linkedin size={20} />
               </a>
             </div> */}
+
+        <div className="mt-12 pt-8 border-t border-slate-100 flex justify-center">
+          <LanguagesWeSpeak variant="compact" className="justify-center text-center" />
+        </div>
 
         <div className="mt-8 text-center">
           <p className="text-slate-400 text-sm">

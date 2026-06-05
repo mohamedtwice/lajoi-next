@@ -1,5 +1,6 @@
 import React from 'react';
 import { Smile, Heart, Shield } from 'lucide-react';
+import LanguagesWeSpeak from '../components/ui/LanguagesWeSpeak';
 
 const About: React.FC = () => {
   return (
@@ -57,6 +58,14 @@ const About: React.FC = () => {
             <h3 className="text-xl font-bold text-slate-800 mb-2">Family Partnership</h3>
             <p className="text-slate-600">We empower parents with the tools to navigate the medical and educational systems effectively.</p>
           </div>
+        </div>
+
+        {/* Languages We Speak — reinforces our commitment to multicultural communities */}
+        <div className="mt-20">
+          <LanguagesWeSpeak
+            description="Communication should never be a barrier to care. Our multicultural team reflects the families we serve and provides support in:"
+            bgClassName="bg-[#E3EBF4]"
+          />
         </div>
       </div>
     </div>

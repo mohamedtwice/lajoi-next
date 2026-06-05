@@ -37,6 +37,20 @@ export const SITE_CONFIG = {
   }
 };
 
+// Languages spoken by our team (kept alphabetical for the "Languages We Speak" component).
+export const SPOKEN_LANGUAGES: string[] = [
+  'Arabic',
+  'Cantonese',
+  'English',
+  'French',
+  'Italian',
+  'Korean',
+  'Mandarin',
+  'Somali',
+  'Spanish',
+  'Swahili',
+];
+
 export const NAV_ITEMS: NavItem[] = [
   // { label: 'Home', path: ROUTES.HOME },
   { label: 'Services', path: ROUTES.SERVICES },
