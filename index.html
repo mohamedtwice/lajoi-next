@@ -67,6 +67,7 @@
           animation: {
             'float': 'float 6s ease-in-out infinite',
             'fade-in': 'fadeIn 0.5s ease-out forwards',
+            'marquee': 'marquee var(--marquee-duration, 40s) linear infinite',
           },
           keyframes: {
             float: {
@@ -76,7 +77,11 @@
             fadeIn: {
               '0%': { opacity: '0', transform: 'translateY(10px)' },
               '100%': { opacity: '1', transform: 'translateY(0)' },
-            }
+            },
+            marquee: {
+              from: { transform: 'translateX(0)' },
+              to: { transform: 'translateX(calc(-100% - var(--marquee-gap, 1rem)))' },
+            },
           }
         }
       }
@@ -92,6 +97,13 @@
     :focus-visible {
       outline: 2px solid #60A693;
       outline-offset: 2px;
+    }
+
+    /* Respect users who prefer reduced motion: stop the marquee, allow manual scroll */
+    @media (prefers-reduced-motion: reduce) {
+      .animate-marquee {
+        animation: none;
+      }
     }
   </style>
 </head>

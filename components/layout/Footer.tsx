@@ -106,7 +106,7 @@ const Footer: React.FC = () => {
               </a>
             </div> */}
 
-        <div className="mt-12 pt-8 border-t border-slate-100 flex justify-center">
+        <div className="mt-2 pt-8 border-t border-slate-100 flex justify-center">
           <LanguagesWeSpeak variant="compact" className="justify-center text-center" />
         </div>
 

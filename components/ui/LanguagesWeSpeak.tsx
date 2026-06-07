@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Check, Globe, Languages } from 'lucide-react';
+import { Globe } from 'lucide-react';
 import { SPOKEN_LANGUAGES } from '../../constants';
 import { ROUTES } from '../../config/routes';
 
@@ -32,7 +32,7 @@ const LanguagesWeSpeak: React.FC<LanguagesWeSpeakProps> = ({
   if (variant === 'compact') {
     return (
       <p className={`flex items-center gap-2 text-sm text-slate-500 ${className}`}>
-        <Globe className="text-brand-500 shrink-0" size={16} />
+        {/* <Globe className="text-brand-500 shrink-0" size={16} /> */}
         <span>
           <span className="font-medium text-slate-600">Languages Spoken:</span>{' '}
           {SPOKEN_LANGUAGES.join(', ')}
@@ -56,29 +56,48 @@ const LanguagesWeSpeak: React.FC<LanguagesWeSpeakProps> = ({
   );
 
   return (
-    <div className={`rounded-3xl ${bgClassName} p-8 sm:p-12 ${className}`}>
-      <div className="max-w-3xl mx-auto text-center">
-        <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-white text-brand-600 shadow-sm mb-6">
-          <Languages size={26} />
-        </div>
-        <h2 className="text-3xl font-display font-bold text-slate-800 mb-4">{title}</h2>
-        <p className="text-slate-600 leading-relaxed mb-8">{description}</p>
+    <div
+    // className={`relative overflow-hidden rounded-[2rem] ${bgClassName} px-6 py-12 sm:px-12 sm:py-16 ring-1 ring-slate-900/5 ${className}`}
+    className={`relative overflow-hidden ${bgClassName} !bg-[#1F3E61] px-6 py-12 sm:px-12 sm:py-16 ring-1 ring-slate-900/5 ${className}`}
+    >
+      {/* <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white/50 to-transparent" /> */}
 
-        <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-8">
-          {SPOKEN_LANGUAGES.map((language) => (
-            <li
-              key={language}
-              className="flex items-center justify-center gap-2 bg-white rounded-full px-4 py-2 text-sm font-medium text-slate-700 shadow-sm"
+      <div className="relative mx-auto max-w-3xl text-center">
+
+        <h2 className="mt-6 font-display text-3xl font-bold tracking-tight text-brand-500 sm:text-4xl">
+          {title}
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white sm:text-lg">
+          {description}
+        </p>
+
+        <div
+          className="group relative mt-10 flex gap-[--marquee-gap] overflow-hidden py-4 [--marquee-gap:0.75rem] sm:[--marquee-gap:1rem] [mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,#000_12%,#000_88%,transparent)] motion-reduce:overflow-x-auto"
+        >
+          {[0, 1].map((copy) => (
+            <ul
+              key={copy}
+              aria-hidden={copy === 1 ? true : undefined}
+              className={`flex shrink-0 items-center gap-[--marquee-gap] animate-marquee group-hover:[animation-play-state:paused] ${
+                copy === 1 ? 'motion-reduce:hidden' : ''
+              }`}
             >
-              <Check className="text-brand-500 shrink-0" size={15} />
-              {language}
-            </li>
+              {SPOKEN_LANGUAGES.map((language) => (
+                <li key={language} className="shrink-0">
+                  <span className="inline-flex items-center gap-2 rounded-full bg-white/80 px-4 py-2.5 text-sm font-medium text-[#1F3E61] shadow-sm ring-1 ring-slate-900/5 backdrop-blur-sm transition-colors duration-300 hover:text-brand-800 hover:ring-brand-200">
+                    {/* <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-brand-400" /> */}
+                    {language}
+                  </span>
+                </li>
+              ))}
+            </ul>
           ))}
-        </ul>
+        </div>
 
-        <p className="text-sm text-slate-500">{footnote ?? defaultFootnote}</p>
+        <p className="mx-auto mt-10 max-w-xl border-t border-slate-900/5 pt-6 text-sm text-brand-50">
+          {footnote ?? defaultFootnote}
+        </p>
       </div>
-
     </div>
   );
 };

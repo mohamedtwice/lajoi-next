@@ -56,11 +56,11 @@ const Home: React.FC = () => {
       </section>
 
       {/* Languages We Speak */}
-      <section className="pb-12 lg:pb-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* <section className="pb-12 lg:pb-20">
+        <div className="mx-auto px-4 sm:px-6 lg:px-8"> */}
           <LanguagesWeSpeak />
-        </div>
-      </section>
+        {/* </div>
+      </section> */}
 
       {/* Services Preview */}
       <section className="py-20 bg-white">
