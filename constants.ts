@@ -1,5 +1,5 @@
 import { Heart, MessageCircle, Puzzle, Users, Brain, MapPin } from 'lucide-react';
-import { NavItem, Service, TeamMember, Testimonial, Resource } from './types';
+import { NavItem, Service, TeamMember, Testimonial, Resource, BusinessHours } from './types';
 import { ROUTES } from './config/routes';
 
 // Site Configuration
@@ -13,20 +13,40 @@ export const SITE_CONFIG = {
       work: "612-489-7059",
     },
     fax: "(612) 605-0040",
-    email: "lajoieautismcenter@gmail.com",
+    email: "info@lajoieautismcenter.com",
     // Primary listing for display logic, but detailed locations are below
-    address: "St. Paul", 
+    address: "St. Paul",
     locations: [
       {
         name: "LaJoie Autism Center",
         address: "1935 County Road B2 W, Unit 350, St. Paul, MN 55113",
+        street: "1935 County Road B2 W, Unit 350",
+        city: "St. Paul",
+        state: "MN",
+        zip: "55113",
         note: "Center based services"
       }
     ],
+    // Single source of truth for opening hours: `days`/`times` drive the UI,
+    // `dayOfWeek`/`opens`/`closes` drive the schema.org structured data.
     hours: [
-      { label: "Weekdays", times: "Monday–Friday 8am–6pm" },
-      { label: "Weekends", times: "Saturday/Sunday 10am–6pm" },
-    ],
+      {
+        label: "Weekdays",
+        days: "Monday to Friday",
+        times: "8:00 am – 8:00 pm",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:00",
+        closes: "20:00",
+      },
+      {
+        label: "Weekends",
+        days: "Saturday & Sunday",
+        times: "10:00 am – 6:00 pm",
+        dayOfWeek: ["Saturday", "Sunday"],
+        opens: "10:00",
+        closes: "18:00",
+      },
+    ] satisfies BusinessHours[],
     hoursNote: "Scheduling that works for your family.",
     executiveDirector: "Houssein ALI MEAD",
   },

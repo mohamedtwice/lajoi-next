@@ -76,14 +76,14 @@ const Footer: React.FC = () => {
 
           {/* Hours */}
           <div>
-            <h3 className="font-display font-bold text-slate-800 mb-4">Hours</h3>
+            <h3 className="font-display font-bold text-slate-800 mb-4">Hours of Operation</h3>
             <p className="text-sm text-slate-500 mb-2">
             Ready to connect? Our center is open:
             </p>
             <dl className="space-y-2 text-sm">
-              {SITE_CONFIG.contact.hours.map(({ label, times }, i) => (
-                <div key={i}>
-                  {/* <dt className="text-slate-500 font-medium">{label}</dt> */}
+              {SITE_CONFIG.contact.hours.map(({ days, times }) => (
+                <div key={days}>
+                  <dt className="text-slate-500 font-medium">{days}</dt>
                   <dd className="text-slate-700 ml-0 mt-0.5">{times}</dd>
                 </div>
               ))}

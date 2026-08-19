@@ -96,18 +96,22 @@ const Contact: React.FC = () => {
                 <Mail className="text-brand-500 shrink-0 mt-1" />
                 <div>
                   <h4 className="font-semibold text-slate-800">Email Us</h4>
-                  <p className="text-slate-600">{SITE_CONFIG.contact.email}</p>
+                  <p className="text-slate-600">
+                    <a href={`mailto:${SITE_CONFIG.contact.email}`} className="hover:text-brand-600 break-words">
+                      {SITE_CONFIG.contact.email}
+                    </a>
+                  </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
                 <Clock className="text-brand-500 shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-slate-800">Hours</h4>
-                  <dl className="space-y-2 text-slate-600">
-                    {SITE_CONFIG.contact.hours.map(({ label, times }, i) => (
-                      <div key={i}>
-                        {/* <dt className="text-slate-500 font-medium">{label}</dt> */}
+                  <h4 className="font-semibold text-slate-800">Hours of Operation</h4>
+                  <dl className="mt-1 space-y-2 text-slate-600">
+                    {SITE_CONFIG.contact.hours.map(({ days, times }) => (
+                      <div key={days}>
+                        <dt className="font-medium text-slate-700">{days}</dt>
                         <dd className="ml-0 mt-0.5">{times}</dd>
                       </div>
                     ))}
